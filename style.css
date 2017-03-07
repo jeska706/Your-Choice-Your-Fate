@@ -6,5 +6,21 @@ body{
 }
 
 .intro{
+    margin-top: 25%;
+    display: none;
+}
+.name{
+    display: none;
+
+}
+.name input{
+    padding: 5px;
+    width: 50%;
+}
+.show{
+    display: none;
+}
+.greeting{
+    margin-top: 25%;
     display: none;
 }
