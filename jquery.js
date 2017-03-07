@@ -1,7 +1,7 @@
 console.log("jquery.js is connected");
 $( document ).ready( function() {
 
-
+    // Intro message
     $('.intro:first').fadeIn(3000).delay(300).fadeOut(4000, function(){
         $('.intro:eq(1)').fadeIn(3000).delay(300).fadeOut(4000, function(){
             $('.intro:eq(2)').fadeIn(3000).delay(300).fadeOut(4000, function(){
@@ -15,10 +15,7 @@ $( document ).ready( function() {
             });
         });
     });
-
-
-
-
+    //Intro message fades out and user adds name
     $('.name').on('submit',function getName(){
         var $playerName = $('input:first').val();
 
