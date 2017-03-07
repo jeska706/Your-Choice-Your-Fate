@@ -16,61 +16,65 @@ $( document ).ready( function() {
     //     });
     // });
 
-    if($('.skip')){
-        console.log("skip to next feature")
-    }
+    // if($('.skip')){
+    //     console.log("skip to next feature")
+    // }
+
+    //creating users health and damage points
+    var $healthPoints = Math.floor(Math.random()*99)+20;
+    var $damage = Math.floor(Math.random()*5)+1;
 
     //Intro message fades out and user adds name
     $('.name').on('submit',function getName(){
         var $playerName = $('input:first').val();
         if($playerName.length > 0){
             $('.name').fadeOut(500);
-            var $greeting = $('.greeting').html("<h2>Welcome, " + $playerName + "</h2>");
+            var $greeting = $('.greeting').html("<h2>Greetings, " + $playerName + "<br> Your current health is: " + $healthPoints + "<br> You loose " + $damage + "  points per accident</h2>");
             $greeting.fadeIn(3000);
             $('.inital-choice').fadeIn(500);
         }else{
-            console.log('Still waiting...');
+            var $error = $('.greeting').html("<h2>Selection invalid</h2>")
+            $error.fadeIn(500);
         }
     });
-
-    $('.forest-choice').click(function(){
-        $(this).addClass('clicked');
-        var $clas = $(this).attr("class");
-        console.log($clas);
-    });
-    $('.cave-choice').click(function(){
-        $(this).addClass('clicked');
-        var $clas = $(this).attr("class");
-        console.log($clas);
-    });
-    $('.city-choice').click(function(){
-        $(this).addClass('clicked');
-        var $clas = $(this).attr("class");
-        console.log($clas);
-    });
-
+    var $points = $('.current-points').text("Current Health: " + $healthPoints);
     //players inital Choice
-    var $choice = $('.inital-choice').on('click', function(){
+    $('.inital-choice').on('click', function(){
         $('.greeting').fadeOut(500);
-        $('.inital-choice').fadeOut(500);
-
-        var $chosen = {};
+            $points.show(100);
         if($('.forest').hasClass('clicked')){
-            console.log("forest");
             $('.forest-choice').show(800);
+            $('.greeting').fadeOut(500);
+            $('.inital-choice').fadeOut(500);
+
         } else if($('.cave').hasClass('clicked')){
-            console.log("cave");
             $('.cave-choice').show(800);
+            $('.greeting').fadeOut(500);
+            $('.inital-choice').fadeOut(500);
+            // $points.show(100);
         } else if($('.city').hasClass('clicked')){
-            console.log("city");
             $('.city-choice').show(800);
+            $('.greeting').fadeOut(500);
+            $('.inital-choice').fadeOut(500);
+            // $points.show(100);
         }
-
     });
-    // $choice();
-
-    console.log($choice)
-
+    //add clicked class and confirming it
+    $('.forest').on('click',function(){
+        $('.forest').addClass('clicked');
+        var $clas = $('.forest').attr("class");
+        console.log("This is the class: ", $clas);
+    });
+    $('.cave').on('click',function(){
+        $('.cave').addClass('clicked');
+        var $clas = $('.cave').attr("class");
+        console.log("This is the class: ", $clas);
+    });
+    $('.city').on('click',function(){
+        $('.city').addClass('clicked');
+        var $clas = $('.city').attr("class");
+        console.log("This is the class: ", $clas);
+    });
 
 
 

@@ -7,10 +7,15 @@
     margin-top: 25%;
 }
 
-.inital-choice{
+.inital-choice, .current-points{
     display: none;
 }
 
+.current-points{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
 .name input{
     padding: 5px;
     width: 50%;
