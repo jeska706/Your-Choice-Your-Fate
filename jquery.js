@@ -1,15 +1,15 @@
 console.log("jquery.js is connected");
-$( window ).on( "load", function() {
+$( document ).ready( function() {
 
 
-    $('.intro:first').fadeIn(800).fadeOut(2500, function(){
-        $('.intro:eq(1)').fadeIn(800).fadeOut(2500, function(){
-            $('.intro:eq(2)').fadeIn(800).fadeOut(2500, function(){
-                $('.intro:eq(3)').fadeIn(800).fadeOut(2500, function(){
-                    $('.intro:eq(4)').fadeIn(800).fadeOut(2500, function(){
-                        $('.intro:eq(5)').fadeIn(800).fadeOut(2500, function(){
-
-                        });   
+    $('.intro:first').fadeIn(3000).delay(300).fadeOut(4000, function(){
+        $('.intro:eq(1)').fadeIn(3000).delay(300).fadeOut(4000, function(){
+            $('.intro:eq(2)').fadeIn(3000).delay(300).fadeOut(4000, function(){
+                $('.intro:eq(3)').fadeIn(3000).delay(300).fadeOut(4000, function(){
+                    $('.intro:eq(4)').fadeIn(3000).delay(300).fadeOut(4000, function(){
+                        $('.intro:eq(5)').fadeIn(3000).delay(300).fadeOut(4000, function(){
+                            $('.name').fadeIn(500);
+                        });
                     });
                 });
             });
@@ -18,10 +18,18 @@ $( window ).on( "load", function() {
 
 
 
-    // $('#two').fadeIn(500).fadeOut(800);
-    // $('#three').fadeIn(500).fadeOut(800);
-    // $('#four').fadeIn(500).fadeOut(800);
-    // $('#five').fadeIn(500).fadeOut(800);
-    // $('#six').fadeIn(500).fadeOut(800);
+
+    $('.name').on('submit',function getName(){
+        var $playerName = $('input:first').val();
+
+        if($playerName.length > 0){
+            $('.name').fadeOut(500);
+            var $greeting = $('.greeting').text("Welcome " + $playerName);
+            $greeting.fadeIn(3000);
+        }else{
+            console.log('Still waiting...');
+        }
+    });
+
 
 });
