@@ -1,26 +1,17 @@
 *{
     text-align: center;
 }
-body{
 
-}
-
-.intro{
+.name, .show, .greeting, .intro, .forest-choice, .cave-choice, .city-choice{
+    display: none;
     margin-top: 25%;
-    display: none;
 }
-.name{
-    display: none;
 
+.inital-choice{
+    display: none;
 }
+
 .name input{
     padding: 5px;
     width: 50%;
-}
-.show{
-    display: none;
-}
-.greeting{
-    margin-top: 25%;
-    display: none;
 }

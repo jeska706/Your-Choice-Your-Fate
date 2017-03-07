@@ -9,6 +9,7 @@
         <title></title>
     </head>
     <body>
+        <!-- <button type="button" class="btn skip">Skip</button> -->
         <div>
             <div class="intro">
                 <h1>You decide your fate...</h1>
@@ -29,15 +30,31 @@
                 <h1>Will you survive....</h1>
             </div>
         </div>
-            <div class="name">
-                <form onsubmit="return false">
-                    <label for="name">What's your name, adventurer?</label><br>
-                    <input id="name" type="text"><br>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            <div class="greeting">
 
+        <div class="name">
+            <form onsubmit="return false">
+                <label for="name">What's your name, adventurer?</label><br>
+                <input id="name" type="text"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="greeting"></div>
+        <div class="inital-choice">
+            <h3>Pick your path</h3>
+            <button type="button" class="forest">Dark Forest</button>
+            <button type="button" class="cave">Under World</button>
+            <button type="button" class="city">City Sewers</button>
+        </div>
+        <div>
+            <div class="forest-choice">
+                <h2>Dark Forest</h2>
             </div>
+            <div class="cave-choice">
+                <h2>Under World</h2>
+            </div>
+            <div class="city-choice">
+                <h2>City Sewers</h2>
+            </div>
+        </div>
     </body>
 </html>
