@@ -25,6 +25,7 @@ $( document ).ready( function() {
     var $damage = Math.floor(Math.random()*5)+1;
 
     //Intro message fades out and user adds name
+    $('#name').focus();
     $('.name').on('submit',function getName(){
         var $playerName = $('input:first').val();
         if($playerName.length > 0){
