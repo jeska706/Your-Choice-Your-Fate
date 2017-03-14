@@ -51,12 +51,12 @@ $( document ).ready( function() {
             $('.cave-choice').show(800);
             $('.greeting').fadeOut(500);
             $('.inital-choice').fadeOut(500);
-            // $points.show(100);
+
         } else if($('.city').hasClass('clicked')){
             $('.city-choice').show(800);
             $('.greeting').fadeOut(500);
             $('.inital-choice').fadeOut(500);
-            // $points.show(100);
+        
         }
     });
     //add clicked class and confirming it
