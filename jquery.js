@@ -43,9 +43,10 @@ $( document ).ready( function() {
         $('.greeting').fadeOut(500);
             $points.show(100);
         if($('.forest').hasClass('clicked')){
-            $('.forest-choice').show(800);
-            $('.greeting').fadeOut(500);
-            $('.inital-choice').fadeOut(500);
+            $('.greeting').slideUp(800);
+            $('.inital-choice').slideUp(800);
+            $('.forest-choice').fadeIn(3000).slideUp(50000);
+            $('.line-1').fadeIn(3000).slideUp(50000);
 
         } else if($('.cave').hasClass('clicked')){
             $('.cave-choice').show(800);
@@ -56,7 +57,7 @@ $( document ).ready( function() {
             $('.city-choice').show(800);
             $('.greeting').fadeOut(500);
             $('.inital-choice').fadeOut(500);
-        
+
         }
     });
     //add clicked class and confirming it
@@ -76,6 +77,7 @@ $( document ).ready( function() {
         console.log("This is the class: ", $clas);
     });
 
+    //entering inital choice scene layout
 
 
 
